@@ -95,10 +95,6 @@ def upload_to_db(chunks, index):
 
     logging.info(f"All chunks processed successfully! Total records uploaded: {total_uploaded}")
 
-def normalize_vector(vec):
-    norm = np.linalg.norm(vec)
-    return vec / norm if norm != 0 else vec
-
 ## Generate embeddings for all text and numeric columns
 df = generate_embeddings(df_origin)
 
